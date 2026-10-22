@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Clívia Noronha · Biorressonância e Estética Médica</title>
+<meta name="description" content="Medicina integrativa e estética em Manaus. Avaliação médica de uma hora para investigar a causa antes de qualquer procedimento.">
+<!-- Aparência do link quando compartilhado no WhatsApp/Instagram -->
+<meta property="og:title" content="Dra. Clívia Noronha · Soul Beauty Wellness">
+<meta property="og:description" content="A beleza vem de dentro pra fora. Agende sua avaliação médica em Manaus.">
+<meta property="og:image" content="https://clivianoronha.com.br/dra.png">
+<meta property="og:url" content="https://clivianoronha.com.br/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   PALETA CLARA — Dra. Clívia Noronha · Soul Beauty Wellness
+   creme + champanhe + dourado · café só nos botões
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --cream:#FDFBF4; --cream2:#F8F3E3;
+  --champ:#F6EEDF; --champ2:#EADCC3; --champ3:#E2CFAE;
+  --gold:#B8960C; --gl:#D4AF37; --gd:#7A6008; --gp:#F5EFC0;
+  --esp:#2C2518; --esp3:#3A2E1A;
+  --ink:#2F261A; --ink2:#6B5D42; --ink3:#9B8A65;
+  --wa:#25D366;
+  --r:22px;
+  --shadow:0 20px 50px -26px rgba(122,96,8,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',-apple-system,sans-serif;color:var(--ink);line-height:1.6;
+  background:var(--cream) radial-gradient(rgba(184,150,12,.09) 1px,transparent 1px) 0 0/22px 22px;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Marcellus',Georgia,serif;font-weight:400}
+button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ── HEADER ── */
+header{position:sticky;top:0;z-index:50;background:rgba(253,251,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,150,12,.18)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1240px;margin:0 auto}
+.brand b{display:block;font-family:'Marcellus',serif;font-weight:400;font-size:19px;color:var(--ink);line-height:1.1}
+.brand span{font-size:10px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+.navpill{display:flex;gap:2px;background:var(--champ);border-radius:999px;padding:5px}
+.navpill button{background:none;border:none;padding:9px 14px;border-radius:999px;font-size:14px;color:var(--ink2);white-space:nowrap;transition:.2s}
+.navpill button:hover{background:#fff;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:999px;font-weight:700;font-size:15px;padding:16px 30px;text-decoration:none;transition:.2s;line-height:1.25;text-align:center}
+.btn-dark{background:var(--esp);color:var(--cream2)}
+.btn-dark:hover{background:var(--esp3)}
+.btn-gold{background:linear-gradient(135deg,var(--gl),var(--gold));color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.12)}
+.btn-gold:hover{filter:brightness(1.05)}
+.btn-ghost{background:#fff;border:1.5px solid var(--champ2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold)}
+.hd .btn{padding:12px 22px;font-size:14px}
+
+/* ── HERO ── */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:70px 24px 100px;max-width:1140px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.05;color:var(--ink);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:18px;color:var(--ink2);max-width:520px;margin-bottom:30px}
+.hero-btns{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.hero-img{position:relative;justify-self:end;width:100%;max-width:420px}
+.foto{position:relative;border-radius:var(--r);overflow:hidden;background:var(--champ2);aspect-ratio:4/5;box-shadow:var(--shadow)}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.foto img:not([src]){visibility:hidden}
+.foto-aviso{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.92);color:#A32D2D;font-size:12px;font-weight:600;padding:8px 10px;border-radius:8px;line-height:1.4;z-index:2}
+.im,.form-l{position:relative}
+.aval-card{position:absolute;left:-70px;bottom:-60px;background:#fff;border-radius:18px;padding:22px 24px;width:290px;box-shadow:0 24px 50px -20px rgba(122,96,8,.35);border:1px solid rgba(184,150,12,.15)}
+.aval-card h3{font-size:18px;margin-bottom:12px}
+.check{list-style:none;display:flex;flex-direction:column;gap:9px}
+.check li{display:flex;gap:10px;font-size:14px;color:var(--ink2);line-height:1.45}
+.check li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
+
+/* ── BLOCOS ── */
+section{scroll-margin-top:90px}
+.block{border-radius:var(--r);padding:56px;margin:0 auto 28px;max-width:1100px;position:relative}
+.champ{background:linear-gradient(150deg,var(--champ) 0%,var(--champ2) 100%);box-shadow:var(--shadow)}
+.light{background:#fff;box-shadow:var(--shadow)}
+.goldline::before{content:'';position:absolute;top:0;left:56px;right:56px;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:14px;color:var(--ink)}
+.sub{font-size:16px;color:var(--ink2);max-width:560px;margin-bottom:28px}
+
+/* pilares */
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0;background:none;box-shadow:none}
+.pilar{background:#fff;border-radius:18px;padding:26px 28px;box-shadow:var(--shadow);border-top:2px solid var(--gl)}
+.pilar h3{font-size:24px;color:var(--gold);margin-bottom:6px}
+.pilar p{font-size:14px;color:var(--ink2)}
+
+/* sintomas */
+.hint{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--gd);border-radius:999px;padding:11px 20px;font-size:14px;font-weight:700;margin-bottom:22px;box-shadow:0 6px 16px -10px rgba(122,96,8,.4)}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.chip{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:rgba(255,255,255,.65);border:1.5px solid rgba(184,150,12,.22);border-radius:14px;padding:15px 16px;color:var(--ink);font-size:15px;font-weight:600;text-align:left;transition:.18s}
+.chip:hover{border-color:var(--gl);background:#fff}
+.chip .row{display:flex;align-items:center;gap:12px}
+.chip .pl{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1;flex-shrink:0;transition:.18s}
+.chip .jr{display:none;font-size:12px;font-weight:600;color:var(--gd);padding-left:36px}
+.chip.on{background:#fff;border-color:var(--gold);box-shadow:0 8px 20px -12px rgba(122,96,8,.5)}
+.chip.on .pl{background:var(--gold);color:#fff}
+.chip.on .jr{display:block}
+.resumo{margin-top:22px;background:#fff;border-radius:16px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.resumo p{font-size:15px;color:var(--ink2)}
+.resumo b{color:var(--ink)}
+.resumo .js{display:block;font-size:13px;color:var(--gd);font-weight:600;margin-top:3px}
+.resumo .btn:disabled{opacity:.45;cursor:not-allowed;filter:grayscale(.5)}
+
+/* formulário */
+.form-block{display:grid;grid-template-columns:1fr 1.15fr;padding:0;overflow:hidden}
+.form-l{position:relative;padding:56px 48px;display:flex;flex-direction:column;justify-content:flex-end;min-height:520px;color:#fff;background:var(--champ3) center/cover no-repeat}
+.form-l::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,38,26,.05) 25%,rgba(47,38,26,.82) 100%)}
+.form-l>*{position:relative}
+.form-l h2{color:#fff}
+.form-l p{color:rgba(255,255,255,.9);margin-bottom:18px;max-width:340px}
+.form-l .check li{color:#fff}
+.form-l .check li::before{color:var(--gl)}
+.form-r{background:#fff;padding:44px 44px 34px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:7px}
+.fld input,.fld textarea{width:100%;border:1.5px solid transparent;background:var(--champ);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:.18s}
+.fld textarea{min-height:96px;resize:vertical}
+.fld input:focus,.fld textarea:focus{border-color:var(--gold);background:#fff}
+.fld input::placeholder,.fld textarea::placeholder{color:#A99A7C}
+.fld .err{display:none;font-size:12px;color:#A32D2D;margin-top:5px}
+.fld.bad input{border-color:#C0473F}
+.fld.bad .err{display:block}
+.fld small{display:block;font-size:11.5px;color:var(--ink3);margin-top:5px}
+.form-r .btn{width:100%}
+.form-note{text-align:center;font-size:12px;color:var(--ink3);margin-top:12px}
+.ok{display:none;text-align:center;padding:30px 10px}
+.ok h3{font-size:26px;margin-bottom:8px}
+.ok p{color:var(--ink2);margin-bottom:18px}
+
+/* dor */
+.dor{max-width:900px;padding:60px 56px}
+.dor h2{max-width:480px}
+.dor p{color:var(--ink2);font-size:16px;margin-bottom:16px}
+.dor p b{color:var(--ink)}
+.dor .serif{font-size:22px;color:var(--gold)}
+
+/* experiência */
+.exp{display:grid;grid-template-columns:1.1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.exp-c{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.exp-c .im{background:var(--champ2) center/cover no-repeat;aspect-ratio:16/10}
+.exp-c.tall{grid-row:span 2}
+.exp-c.tall .im{aspect-ratio:auto;flex:1;min-height:360px;background-position:center 30%}
+.exp-c .tx{padding:18px 22px 20px}
+.exp-c small{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+.exp-c h4{font-family:'Marcellus',serif;font-weight:400;font-size:20px;margin:4px 0 4px}
+.exp-c p{font-size:14px;color:var(--ink2)}
+.exp-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+
+/* jornada 4 meses */
+.meses{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:36px 0 30px}
+.mes .dot{display:flex;align-items:center;margin-bottom:14px}
+.mes .dot i{width:15px;height:15px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(212,175,55,.25);flex-shrink:0}
+.mes .dot span{height:1px;flex:1;background:linear-gradient(90deg,var(--gold),rgba(184,150,12,.2))}
+.mes small{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--gold)}
+.mes h4{font-size:16px;color:var(--ink);margin:2px 0 4px}
+.mes p{font-size:13.5px;color:var(--ink2)}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:34px}
+.box{background:#fff;border-radius:14px;padding:18px 20px}
+.box h4{color:var(--ink);font-size:14.5px;margin-bottom:4px}
+.box p{font-size:13.5px;color:var(--ink2)}
+.promessa{font-family:'Marcellus',serif;font-size:clamp(20px,2.6vw,26px);line-height:1.35;color:var(--gd);max-width:540px}
+
+/* jornadas */
+.jgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.jcard{background:linear-gradient(150deg,var(--cream),var(--champ));border-radius:16px;padding:22px 24px;border:1px solid rgba(184,150,12,.12)}
+.jcard.top{grid-column:1/-1;background:linear-gradient(135deg,var(--gp),var(--champ2));border-color:rgba(184,150,12,.3)}
+.jcard small{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+.jcard h4{font-size:17px;margin:6px 0 6px;color:var(--ink)}
+.jcard p{font-size:14px;color:var(--ink2)}
+
+/* app */
+.app{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.feat{background:linear-gradient(150deg,var(--cream),var(--champ));border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.feat h4{font-size:15px;margin-bottom:3px}
+.feat p{font-size:13.5px;color:var(--ink2)}
+.phone{justify-self:center;width:210px;background:linear-gradient(160deg,var(--gl),var(--gold));border-radius:30px;padding:12px;box-shadow:0 30px 50px -20px rgba(122,96,8,.55)}
+.phone .scr{background:var(--cream);border-radius:20px;padding:20px 16px}
+.phone small{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.phone h5{font-family:'Marcellus',serif;font-weight:400;font-size:17px;margin:4px 0 12px}
+.step{display:flex;gap:9px;padding:11px 0;border-top:1px solid var(--champ2)}
+.step i{width:7px;height:7px;border-radius:50%;background:var(--ink3);margin-top:6px;flex-shrink:0}
+.step i.g{background:var(--gold)}
+.step b{display:block;font-size:12.5px}
+.step span{font-size:11.5px;color:var(--ink3)}
+
+/* sobre */
+.sobre{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.sobre p{color:var(--ink2);margin-bottom:14px}
+.sobre p b{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{background:#fff;color:var(--gd);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills span{background:#fff;border-radius:999px;padding:11px 20px;font-size:14px;font-weight:600;box-shadow:0 4px 12px -6px rgba(122,96,8,.3)}
+
+/* faq */
+.faq-i{background:linear-gradient(150deg,var(--cream),var(--champ));border-radius:16px;margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:none;padding:20px 22px;font-family:'Marcellus',serif;font-size:18px;color:var(--ink);text-align:left}
+.faq-q span{transition:transform .25s;color:var(--gold);font-family:'Mulish';font-size:14px}
+.faq-i.open .faq-q span{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 22px 20px;max-width:640px}
+.faq-i.open .faq-a{display:block}
+.faq-a p{font-size:14px;color:var(--ink2);margin-bottom:10px}
+
+/* onde */
+.onde{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:12px}
+.info small{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--ink3)}
+.info p{font-size:14.5px;margin-top:3px}
+.info a{text-decoration:none}
+.novidade{background:var(--gp);border-radius:14px;padding:18px 20px;border-left:3px solid var(--gold)}
+.novidade h4{font-size:15px;margin-bottom:4px}
+.novidade p{font-size:13.5px;color:var(--ink2)}
+.horas{background:#fff;border-radius:14px;padding:8px 20px;margin-bottom:12px}
+.horas div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--champ);font-size:14px;color:var(--ink2)}
+.horas div:last-child{border:none}
+.horas b{color:var(--ink)}
+.mapa{border-radius:14px;overflow:hidden;height:190px;background:var(--champ)}
+.mapa iframe{width:100%;height:100%;border:0}
+
+/* cta final + footer */
+.final{text-align:center;padding:64px 40px;background:linear-gradient(135deg,var(--gp),var(--champ2));box-shadow:var(--shadow)}
+.final h2{margin-bottom:12px}
+.final p{color:var(--ink2);max-width:380px;margin:0 auto 26px}
+footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding:40px 0 90px;margin-top:40px}
+.ft{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ft h4{font-family:'Marcellus',serif;font-weight:400;color:var(--ink);font-size:17px;margin-bottom:8px}
+.ft p,.ft a{font-size:13.5px;color:var(--ink2);text-decoration:none;display:block}
+.disc{border-top:1px solid rgba(184,150,12,.25);margin-top:26px;padding-top:16px;font-size:12px;color:var(--ink3);max-width:520px}
+
+/* ── WHATSAPP FIXO ── */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:999;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;border-radius:999px;padding:0 20px 0 0;height:60px;box-shadow:0 10px 26px -6px rgba(0,0,0,.35);font-weight:700;font-size:14px;transition:transform .2s}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float .ic{width:60px;height:60px;display:flex;align-items:center;justify-content:center;position:relative}
+.wa-float .ic::after{content:'';position:absolute;inset:6px;border-radius:50%;border:2px solid rgba(255,255,255,.7);animation:pulse 2.2s infinite}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+
+/* ── RESPONSIVO ── */
+@media(max-width:1000px){
+  .navpill{display:none}
+  .hero{grid-template-columns:1fr;padding:40px 20px 110px}
+  .hero-img{justify-self:center}
+  .aval-card{left:auto;right:-10px}
+}
+@media(max-width:760px){
+  .wrap{padding:0 16px}
+  .hd{padding:12px 16px}
+  .brand b{font-size:17px}
+  .hd .btn{padding:10px 16px;font-size:13px}
+  .block{padding:36px 22px;border-radius:18px;margin:0 12px 18px}
+  .pilares{padding:0}
+  .goldline::before{left:22px;right:22px}
+  .pilares,.chips,.meses,.boxes,.jgrid,.app,.sobre,.onde,.ft,.grid2,.form-block,.exp,.exp-row{grid-template-columns:1fr}
+  .exp-c.tall{grid-row:auto}
+  .exp-c.tall .im{min-height:0;aspect-ratio:4/5}
+  .form-block{padding:0}
+  .form-l{padding:36px 24px;min-height:420px}
+  .form-r{padding:30px 22px 26px}
+  .hero-img{max-width:340px}
+  .aval-card{position:relative;left:0;right:0;bottom:0;width:100%;margin-top:-40px}
+  .hero{padding-bottom:50px}
+  .dor{padding:40px 24px}
+  .sobre .foto{max-width:320px}
+  .phone{margin-top:10px}
+  .wa-float{right:14px;bottom:14px;padding:0}
+  .wa-float .lbl{display:none}
+  .resumo .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ HEADER ════════ -->
+<header>
+  <div class="hd">
+    <div class="brand"><b>Dra. Clívia Noronha</b><span>Soul Beauty Wellness</span></div>
+    <nav class="navpill">
+      <button data-go="s-sinto">O que sinto</button>
+      <button data-go="s-exp">A experiência</button>
+      <button data-go="s-como">Como funciona</button>
+      <button data-go="s-jornadas">As jornadas</button>
+      <button data-go="s-sobre">Sobre mim</button>
+      <button data-go="s-faq">Dúvidas</button>
+      <button data-go="s-onde">Onde estou</button>
+    </nav>
+    <button class="btn btn-dark" data-go="s-form">Agendar<br>avaliação</button>
+  </div>
+</header>
+
+<!-- ════════ HERO ════════ -->
+<div class="hero">
+  <div>
+    <div class="eyebrow">Medicina integrativa e estética · Manaus</div>
+    <h1>A beleza vem <em>de dentro pra fora.</em></h1>
+    <p>Reequilibrar e desinflamar o organismo antes de tratar o que aparece no espelho. É assim que eu trabalho — investigando a causa, e só depois falando de procedimento.</p>
+    <div class="hero-btns">
+      <button class="btn btn-dark" data-go="s-form">Agendar minha avaliação médica</button>
+      <button class="btn btn-ghost" data-go="s-sinto">Descobrir minha jornada</button>
+    </div>
+  </div>
+  <div class="hero-img">
+    <div class="foto"><img data-img="dra" alt="Dra. Clívia Noronha"></div>
+    <div class="aval-card">
+      <h3>Como é a avaliação</h3>
+      <ul class="check">
+        <li>Uma hora, só sobre você</li>
+        <li>Sono, intestino, estresse e hormônios</li>
+        <li>Exames antes de qualquer procedimento</li>
+        <li>Plano feito para o seu caso</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ SOUL · BEAUTY · WELLNESS ════════ -->
+<div class="block pilares">
+  <div class="pilar"><h3>Soul</h3><p>Sono, estresse e o que está inflamando por dentro.</p></div>
+  <div class="pilar"><h3>Beauty</h3><p>Pele, cabelo e contorno tratados depois da causa.</p></div>
+  <div class="pilar"><h3>Wellness</h3><p>Autocuidado como rotina, não como sessão avulsa.</p></div>
+</div>
+
+<!-- ════════ O QUE ESTÁ TE INCOMODANDO ════════ -->
+<section id="s-sinto" class="block champ">
+  <h2>O que está te incomodando?</h2>
+  <p class="sub">Marque o que é seu. Eu te mostro por qual jornada isso costuma ser tratado — e já levo tudo para a sua mensagem.</p>
+  <div class="hint">↓ &nbsp;Toque no que você sente</div>
+  <div class="chips" id="chips"></div>
+  <div class="resumo">
+    <p id="resumo-txt"><b>Nenhuma</b> queixa marcada ainda</p>
+    <button class="btn btn-dark" id="btn-resumo" disabled>Agendar minha avaliação</button>
+  </div>
+</section>
+
+<!-- ════════ FORMULÁRIO ════════ -->
+<section id="s-form" class="block light form-block">
+  <div class="form-l" data-bg="consulta">
+    <h2>Começa por uma avaliação</h2>
+    <p>Uma hora comigo, investigando antes de falar de qualquer tratamento.</p>
+    <ul class="check">
+      <li>Sono, intestino, estresse, hormônios e exames</li>
+      <li>O que eu indico sai da sua consulta, não de uma tabela</li>
+      <li>Escopo e valor fechados antes de começar</li>
+    </ul>
+  </div>
+  <div class="form-r">
+    <form id="form" novalidate>
+      <div class="fld" id="fd-nome">
+        <label for="f-nome">Seu nome</label>
+        <input id="f-nome" type="text" placeholder="Como você prefere ser chamada" autocomplete="name">
+        <div class="err">Conte como podemos te chamar.</div>
+      </div>
+      <div class="grid2">
+        <div class="fld" id="fd-wpp">
+          <label for="f-wpp">WhatsApp com DDD</label>
+          <input id="f-wpp" type="tel" placeholder="(92) 90000-0000" autocomplete="tel">
+          <div class="err">Informe um WhatsApp válido.</div>
+        </div>
+        <div class="fld" id="fd-email">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" type="email" placeholder="seunome@email.com" autocomplete="email">
+          <div class="err">Confira o e-mail.</div>
+        </div>
+      </div>
+      <div class="fld" id="fd-cpf">
+        <label for="f-cpf">CPF</label>
+        <input id="f-cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" maxlength="14">
+        <div class="err">CPF inválido. Verifique e tente novamente.</div>
+        <small>Usado só para localizar seu agendamento no WhatsApp.</small>
+      </div>
+      <div class="fld">
+        <label for="f-queixa">O que está te incomodando?</label>
+        <textarea id="f-queixa" placeholder="Conte com suas palavras: há quanto tempo, o que já tentou."></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark" id="btn-enviar">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3z"/></svg>
+        Agendar minha avaliação médica
+      </button>
+      <p class="form-note">Ao enviar, o WhatsApp abre com a sua mensagem já pronta.</p>
+    </form>
+    <div class="ok" id="ok">
+      <h3>Pronto, recebi seus dados ✦</h3>
+      <p>O WhatsApp abriu em outra aba com a sua mensagem. Se não abriu, toque abaixo.</p>
+      <a class="btn btn-dark" id="ok-link" target="_blank" rel="noopener">Abrir o WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DOR ════════ -->
+<div class="block champ goldline dor">
+  <h2>Você já fez sessão em três lugares diferentes.</h2>
+  <p>Gastou, não viu resultado, e ficou com a sensação de que <b>ninguém nunca olhou a causa</b>.</p>
+  <p class="serif">Aqui ninguém te vende um pacote.</p>
+</div>
+
+<!-- ════════ EXPERIÊNCIA DA CLIENTE ════════ -->
+<section id="s-exp" class="block light goldline">
+  <h2>A experiência Soul</h2>
+  <p class="sub">Do primeiro encontro ao spa, cada detalhe pensado para você desacelerar — e ser cuidada sem pressa.</p>
+  <div class="exp">
+    <div class="exp-c tall">
+      <div class="im" data-bg="consulta"></div>
+      <div class="tx"><small>A consulta</small><h4>Uma hora só sobre você</h4><p>Eu examino, escuto e monto com você um plano personalizado — antes de falar de qualquer procedimento.</p></div>
+    </div>
+    <div class="exp-c">
+      <div class="im" data-bg="app" style="background-position:center 55%"></div>
+      <div class="tx"><small>Sua escolha</small><h4>Você escolhe a experiência</h4><p>Música, bebida e ambiente escolhidos por você no tablet, antes de cada sessão.</p></div>
+    </div>
+    <div class="exp-c">
+      <div class="im" data-bg="spa"></div>
+      <div class="tx"><small>Spa capilar</small><h4>Couro cabeludo em ritual</h4><p>Spa capilar com cromoterapia, em sala reservada, com luz baixa e trilha que você escolhe.</p></div>
+    </div>
+  </div>
+  <div class="exp-row">
+    <div class="exp-c">
+      <div class="im" data-bg="massagem"></div>
+      <div class="tx"><small>Bem-estar</small><h4>Massagem sem pressa</h4><p>Toalhas quentes, velas e mãos treinadas — o tempo da sessão é só seu.</p></div>
+    </div>
+    <div class="exp-c" style="justify-content:center;background:linear-gradient(135deg,var(--gp),var(--champ2))">
+      <div class="tx" style="padding:30px 28px">
+        <small>Na clínica</small>
+        <h4 style="font-size:24px;margin-bottom:12px">Pequenos cuidados que fazem diferença</h4>
+        <ul class="check">
+          <li>Recepção com água saborizada, chá ou café</li>
+          <li>Salas individuais, sem fila nem pressa</li>
+          <li>Orientações de pós entregues no aplicativo</li>
+          <li>Canal aberto comigo durante a jornada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ JORNADA 4 MESES ════════ -->
+<section id="s-como" class="block champ">
+  <h2 style="max-width:580px">O que começa ali não é um procedimento. É uma jornada de quatro meses.</h2>
+  <p class="sub">Com data marcada já no dia em que você decide, e um aplicativo em que você acompanha cada etapa.</p>
+  <div class="meses">
+    <div class="mes"><div class="dot"><i></i><span></span></div><small>MÊS 1</small><h4>Investigar</h4><p>Exames, história e o que está inflamando por dentro. O plano nasce daqui.</p></div>
+    <div class="mes"><div class="dot"><i></i><span></span></div><small>MÊS 2</small><h4>Corrigir</h4><p>Começam os ajustes e as primeiras etapas do tratamento, com retorno marcado.</p></div>
+    <div class="mes"><div class="dot"><i></i><span></span></div><small>MÊS 3</small><h4>Responder</h4><p>Colágeno leva cerca de noventa dias. Cabelo, três meses. É aqui que o corpo devolve.</p></div>
+    <div class="mes"><div class="dot"><i></i><span></span></div><small>MÊS 4</small><h4>Assentar</h4><p>Ajuste fino, avaliação do resultado e o que segue depois da jornada.</p></div>
+  </div>
+  <div class="boxes">
+    <div class="box"><h4>Encontros presenciais comigo</h4><p>Todos os retornos já marcados no dia em que você decide.</p></div>
+    <div class="box"><h4>Aplicativo com o seu cronograma</h4><p>Orientações de cada etapa e canal aberto todos os dias, inclusive entre consultas.</p></div>
+    <div class="box"><h4>Escopo e valor fechados</h4><p>Definidos antes de começar, sem surpresa no meio do caminho.</p></div>
+    <div class="box"><h4>O que dói e o que pode não funcionar</h4><p>Eu digo antes, com clareza, e não suavizo.</p></div>
+  </div>
+  <p class="promessa">Não prometo resultado. Prometo que você não vai passar nenhum dia desses quatro meses sozinha.</p>
+</section>
+
+<!-- ════════ AS JORNADAS ════════ -->
+<section id="s-jornadas" class="block light goldline">
+  <h2>As jornadas</h2>
+  <p class="sub">Cada uma dura quatro meses e começa pela mesma avaliação. O caminho é que muda.</p>
+  <div class="jgrid" id="jgrid"></div>
+</section>
+
+<!-- ════════ APLICATIVO ════════ -->
+<section id="s-app" class="block light goldline">
+  <div class="app">
+    <div>
+      <h2>Você não some entre uma consulta e outra</h2>
+      <p class="sub">Cronograma, orientações de cada etapa e canal aberto comigo todos os dias.</p>
+      <div class="feat"><h4>Cronograma da jornada</h4><p>Cada encontro com data marcada desde o dia em que você decide.</p></div>
+      <div class="feat"><h4>Orientações por etapa</h4><p>O que fazer antes, durante e depois de cada procedimento.</p></div>
+      <div class="feat"><h4>Canal aberto</h4><p>Dúvida no meio do caminho não espera o próximo retorno.</p></div>
+    </div>
+    <div class="phone"><div class="scr">
+      <small>SUA JORNADA</small>
+      <h5>Renew · Mês 2</h5>
+      <div class="step"><i></i><div><b>Avaliação médica</b><span>concluída</span></div></div>
+      <div class="step"><i></i><div><b>Exames revisados</b><span>concluído</span></div></div>
+      <div class="step"><i class="g"></i><div><b>2º encontro</b><span>quinta, 14h</span></div></div>
+      <div class="step"><i class="g"></i><div><b>Orientação de pós</b><span>disponível</span></div></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ════════ SOBRE ════════ -->
+<section id="s-sobre" class="block champ">
+  <div class="sobre">
+    <div class="foto"><img data-img="dra" alt="Dra. Clívia Noronha"></div>
+    <div>
+      <h2>Quem vai te atender</h2>
+      <p><b>Dra. Clívia Noronha</b>, médica formada pela Universidade do Estado do Amazonas, CRM/AM 9.190. Atende em Manaus, no Cristal Tower.</p>
+      <p>Beleza de dentro para fora: reequilibrar e desinflamar o organismo, e só então associar procedimento estético dentro de uma jornada.</p>
+      <div class="tags"><span class="tag">CRM/AM 9.190</span><span class="tag">Medicina integrativa</span><span class="tag">Manaus · AM</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BEM-ESTAR AVULSO ════════ -->
+<div class="block champ goldline">
+  <h2>Bem-estar avulso</h2>
+  <p class="sub">Você pode fazer com ou sem jornada.</p>
+  <div class="pills"><span>Spa capilar</span><span>Spa das mãos e dos pés</span><span>Manicure</span><span>Podologia</span><span>Massagem</span></div>
+</div>
+
+<!-- ════════ FAQ ════════ -->
+<section id="s-faq" class="block light goldline">
+  <h2>O que me perguntam<br>antes de decidir</h2>
+  <div style="margin-top:24px" id="faq"></div>
+</section>
+
+<!-- ════════ ONDE ════════ -->
+<section id="s-onde" class="block champ goldline">
+  <h2>Onde você será atendida</h2>
+  <div class="onde" style="margin-top:24px">
+    <div>
+      <div class="info"><small>ENDEREÇO</small><p>Av. Jornalista Humberto Calderaro Filho, 455 — Cristal Tower, sala 303<br>Adrianópolis, Manaus · AM · 69057-015</p></div>
+      <div class="info"><small>WHATSAPP</small><p><a class="wa-link" target="_blank" rel="noopener">(92) 98202-9883</a></p></div>
+      <div class="info"><small>INSTAGRAM</small><p><a href="https://www.instagram.com/draclivianoronha" target="_blank" rel="noopener">@draclivianoronha</a></p></div>
+      <div class="novidade"><h4>A clínica está crescendo</h4><p>Reinauguração em setembro, com spa capilar coreano e novos serviços de saúde e bem-estar — o sentido completo de Soul Beauty Wellness.</p></div>
+    </div>
+    <div>
+      <div class="horas">
+        <div><span>Segunda</span><b>13h às 18h</b></div>
+        <div><span>Terça</span><b>13h às 18h</b></div>
+        <div><span>Quarta</span><b>13h às 18h</b></div>
+        <div><span>Quinta</span><b>13h às 18h</b></div>
+        <div><span>Sexta</span><b>13h às 18h</b></div>
+        <div><span>Sábado e domingo</span><b>Fechado</b></div>
+      </div>
+      <div class="mapa"><iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Cristal+Tower,+Av.+Jornalista+Humberto+Calderaro+Filho,+455,+Manaus+AM&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CTA FINAL ════════ -->
+<div class="block final">
+  <h2>Comece pela causa,<br>não pelo procedimento</h2>
+  <p>A avaliação dura uma hora. É dela que sai o que faz sentido para o seu caso.</p>
+  <button class="btn btn-dark" data-go="s-form">Agendar minha avaliação médica</button>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><h4>Dra. Clívia Noronha</h4><p>Médica · CRM/AM 9.190</p><p>Universidade do Estado do Amazonas</p></div>
+      <div><h4>Soul Beauty Wellness</h4><p>Cristal Tower, sala 303 · Adrianópolis</p><p>Manaus · AM</p></div>
+      <div><h4>Contato</h4><a class="wa-link" target="_blank" rel="noopener">(92) 98202-9883</a><a href="https://www.instagram.com/draclivianoronha" target="_blank" rel="noopener">@draclivianoronha</a></div>
+    </div>
+    <p class="disc">Conteúdo informativo. Não substitui consulta, diagnóstico ou tratamento médico. Resultados variam conforme cada paciente e sua condição clínica.</p>
+  </div>
+</footer>
+
+<!-- ════════ BOTÃO WHATSAPP SEMPRE NA TELA ════════ -->
+<a class="wa-float wa-link" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span class="ic"><svg viewBox="0 0 32 32"><path d="M16.04 3C8.86 3 3.04 8.8 3.04 15.94c0 2.28.6 4.5 1.74 6.46L3 29l6.78-1.76a13 13 0 0 0 6.26 1.6h.01c7.17 0 13-5.8 13-12.94C29.05 8.8 23.21 3 16.04 3zm0 23.66a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-4.02 1.05 1.07-3.9-.26-.4a10.7 10.7 0 0 1-1.65-5.74c0-5.94 4.85-10.77 10.8-10.77 5.94 0 10.78 4.83 10.78 10.77 0 5.94-4.84 10.72-10.82 10.72zm5.92-8.04c-.32-.16-1.92-.94-2.22-1.05-.3-.11-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.37-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.5.14-.65.15-.15.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.21 2.28 3.47 5.52 4.87.77.33 1.37.53 1.84.68.77.24 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.75.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37z"/></svg></span>
+  <span class="lbl">Fale comigo</span>
+</a>
+
+<script>
+/* ═══════════════ CONFIGURAÇÕES ═══════════════ */
+var WHATSAPP = '5592982029883';  // número que recebe as mensagens
+
+/* URL do Apps Script que salva o cadastro na planilha.
+   Copie em Apps Script → Implantar → Gerenciar implantações → botão "Copiar" (termina em /exec) */
+var API_URL = 'https://script.google.com/macros/s/AKfycbxIsnDeduiZm6gqp88XE1CnRvUQ2hwwG5HvJklcWLDRkgCawiIGa8s1PEhmM2WFgaHJ/exec';
+
+/* FRASES-GATILHO DO MANYCHAT — a 1ª linha de cada mensagem.
+   No ManyChat, crie uma "Palavra-chave" (contém) igual a cada frase abaixo. */
+var GATILHO_AGENDAR = 'Quero agendar minha avaliação';
+var GATILHO_CONTATO = 'Vim pelo site da Dra. Clívia';
+
+/* ═══════════════ FOTOS ═══════════════
+   As fotos ficam ao lado deste index.html, com estes nomes
+   (pode ser .png, .jpg ou .jpeg). Se a 1ª não existir, usa a 2ª. */
+var FOTOS = {
+  dra:      ['dra'],
+  consulta: ['consulta'],
+  app:      ['app'],
+  massagem: ['massagem'],
+  spa:      ['spa','massagem']   // sem spa.png, usa a foto da massagem
+};
+var EXTENSOES = ['.png','.jpg','.jpeg','.PNG','.JPG','.JPEG'];
+function avisoFoto(k,txt){
+  document.querySelectorAll('[data-img="'+k+'"],[data-bg="'+k+'"]').forEach(function(el){
+    var box = el.tagName==='IMG' ? el.parentNode : el;
+    if(box.querySelector('.foto-aviso')) return;
+    var d=document.createElement('div');
+    d.className='foto-aviso';
+    d.textContent=txt;
+    box.appendChild(d);
+  });
+}
+Object.keys(FOTOS).forEach(function(k){
+  var tentativas=[];
+  FOTOS[k].forEach(function(nome){EXTENSOES.forEach(function(ext){tentativas.push(nome+ext);});});
+  (function tenta(i){
+    if(i>=tentativas.length){ avisoFoto(k,'Foto não encontrada: '+FOTOS[k][0]+'.png'); return; }
+    var url=tentativas[i], teste=new Image();
+    teste.onload=function(){
+      document.querySelectorAll('[data-img="'+k+'"]').forEach(function(el){el.src=url;});
+      document.querySelectorAll('[data-bg="'+k+'"]').forEach(function(el){el.style.backgroundImage='url("'+url+'")';});
+    };
+    teste.onerror=function(){ tenta(i+1); };
+    teste.src=url;
+  })(0);
+});
+
+/* ═══════════════ DADOS ═══════════════ */
+var JORNADAS = {
+  selfmind:{t:'Jornada Self Mind',     cat:'Sono e dor',       d:'Para quem não dorme direito ou convive com dor de cabeça. Começo pelos exames e procuro a causa.'},
+  renew:   {t:'Jornada Renew',         cat:'Pele do rosto',    d:'Renovação profunda para flacidez, rugas e manchas, com estímulo de colágeno até o resultado assentar.'},
+  capilar: {t:'Jornada Capilar',       cat:'Cabelo e barba',   d:'Queda, fio afinando ou barba rala. Tratamento do couro cabeludo dentro de sessões de spa.'},
+  signature:{t:'Jornada Signature',    cat:'Contorno facial',  d:'Definição e contorno devolvidos aos poucos, sem mudar o seu traço.'},
+  curve:   {t:'Jornada Curve',         cat:'Corpo',            d:'Trata a causa da celulite: as fibras que puxam a pele por dentro e formam os furinhos.'},
+  acne:    {t:'Jornada Acne Control',  cat:'Acne adulta',      d:'Acne adulta não se resolve secando a pele. Investigo o que inflama por dentro até estabilizar.'},
+  balance: {t:'Jornada Balance',       cat:'Metabolismo e energia', d:'Metabolismo lento, inchaço e retenção. Investigo sono, intestino e inflamação para devolver o equilíbrio.'}
+};
+var SINTOMAS = [
+  ['Não durmo bem','selfmind'],['Dor de cabeça frequente','selfmind'],['Cansaço o tempo todo','selfmind'],
+  ['Queda de cabelo','capilar'],['Fio afinando ou barba rala','capilar'],['Acne que não passa','acne'],
+  ['Manchas no rosto','renew'],['Flacidez e rugas','renew'],['Perdi definição no rosto','signature'],
+  ['Celulite e firmeza','curve'],['Metabolismo travado','balance'],['Inchaço e retenção','balance']
+];
+var FAQ = [
+  ['Quanto custa?',[
+    'A avaliação tem valor fixo, informado no agendamento, e dura uma hora. O valor da jornada só aparece depois dela, porque depende do que os seus exames e a sua queixa mostrarem — não tem tabela pronta na recepção.',
+    'O escopo e o valor ficam fechados pelos quatro meses, com opção de parcelamento. E se você decidir seguir em até 7 dias, o valor da avaliação é abatido integralmente da jornada.']],
+  ['Dói? Vou ficar marcada?',[
+    'Depende do procedimento, e eu te digo antes, com clareza. Cuidamos do seu conforto em cada etapa, e a maioria permite voltar à rotina no mesmo dia.',
+    'Quando existe chance de vermelhidão ou roxinho, você sabe com antecedência para marcar num dia que não atrapalhe a sua agenda.']],
+  ['Isso funciona mesmo?',[
+    'Eu não prometo resultado — cada organismo responde de um jeito. O que eu garanto é investigar a causa antes de indicar qualquer coisa, e te dizer o que pode não funcionar no seu caso.',
+    'É por isso que a jornada tem quatro meses: colágeno e cabelo levam esse tempo para responder.']],
+  ['Não dá para fazer só uma sessão, para testar?',[
+    'A avaliação é justamente essa primeira etapa: uma hora, sem compromisso de seguir. Sessão avulsa sem saber a causa costuma ser o motivo de quem chega aqui depois de tentar em outros lugares.',
+    'Os serviços de bem-estar (spa, massagem, podologia) podem ser feitos avulsos, com ou sem jornada.']],
+  ['Consigo mais barato em outro lugar. Por que aqui?',[
+    'Provavelmente consegue. A diferença está no que vem junto: avaliação médica, exames, retornos já marcados, aplicativo e canal aberto comigo durante os quatro meses.',
+    'Você paga por um caminho acompanhado, não por uma sessão isolada.']]
+];
+
+/* ═══════════════ HELPERS ═══════════════ */
+function $(id){return document.getElementById(id);}
+function waUrl(txt){return 'https://wa.me/'+WHATSAPP+(txt?'?text='+encodeURIComponent(txt):'');}
+function goTo(id){var el=$(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+
+document.querySelectorAll('[data-go]').forEach(function(b){
+  b.addEventListener('click',function(){goTo(b.getAttribute('data-go'));});
+});
+document.querySelectorAll('.wa-link').forEach(function(a){
+  a.href = waUrl(GATILHO_CONTATO+' ✨\n\nOlá! Tenho uma dúvida antes de agendar.');
+});
+
+/* ═══════════════ SINTOMAS ═══════════════ */
+var marcados = [];
+(function(){
+  var wrap=$('chips');
+  SINTOMAS.forEach(function(s,i){
+    var b=document.createElement('button');
+    b.type='button';b.className='chip';
+    b.innerHTML='<span class="row"><span class="pl">+</span><span></span></span><span class="jr"></span>';
+    b.querySelector('.row span:last-child').textContent=s[0];
+    b.querySelector('.jr').textContent='→ '+JORNADAS[s[1]].t;
+    b.addEventListener('click',function(){
+      var k=marcados.indexOf(i);
+      if(k>-1){marcados.splice(k,1);b.classList.remove('on');b.querySelector('.pl').textContent='+';}
+      else{marcados.push(i);b.classList.add('on');b.querySelector('.pl').textContent='✓';}
+      atualizaResumo();
+    });
+    wrap.appendChild(b);
+  });
+})();
+function jornadasMarcadas(){
+  var js=[];
+  marcados.forEach(function(i){var t=JORNADAS[SINTOMAS[i][1]].t;if(js.indexOf(t)<0)js.push(t);});
+  return js;
+}
+function atualizaResumo(){
+  var n=marcados.length,r=$('resumo-txt');
+  if(!n){r.innerHTML='<b>Nenhuma</b> queixa marcada ainda';$('btn-resumo').disabled=true;return;}
+  r.innerHTML='<b>'+n+'</b> '+(n===1?'queixa marcada':'queixas marcadas')+'<span class="js"></span>';
+  r.querySelector('.js').textContent='Caminho provável: '+jornadasMarcadas().join(' · ');
+  $('btn-resumo').disabled=false;
+}
+$('btn-resumo').addEventListener('click',function(){
+  var ta=$('f-queixa');
+  var lista=marcados.map(function(i){return SINTOMAS[i][0];}).join(', ');
+  if(!ta.value.trim()) ta.value='Marquei: '+lista+'.\n';
+  goTo('s-form');
+  setTimeout(function(){$('f-nome').focus();},600);
+});
+
+/* ═══════════════ JORNADAS ═══════════════ */
+(function(){
+  var g=$('jgrid');
+  var top=document.createElement('div');top.className='jcard top';
+  top.innerHTML='<small>Ponto de partida</small><h4>Avaliação médica integrativa</h4><p>Uma hora investigando sono, intestino, estresse, hormônios e exames — antes de falar de procedimento. O que aparece no espelho quase sempre é consequência de outra coisa.</p>';
+  g.appendChild(top);
+  Object.keys(JORNADAS).forEach(function(k){
+    var j=JORNADAS[k],c=document.createElement('div');c.className='jcard';
+    c.innerHTML='<small></small><h4></h4><p></p>';
+    c.querySelector('small').textContent=j.cat;
+    c.querySelector('h4').textContent=j.t;
+    c.querySelector('p').textContent=j.d;
+    g.appendChild(c);
+  });
+})();
+
+/* ═══════════════ FAQ ═══════════════ */
+(function(){
+  var w=$('faq');
+  FAQ.forEach(function(f,i){
+    var it=document.createElement('div');it.className='faq-i'+(i===0?' open':'');
+    it.innerHTML='<button class="faq-q" type="button"><em style="font-style:normal"></em><span>⌄</span></button><div class="faq-a"></div>';
+    it.querySelector('em').textContent=f[0];
+    f[1].forEach(function(p){var e=document.createElement('p');e.textContent=p;it.querySelector('.faq-a').appendChild(e);});
+    it.querySelector('.faq-q').addEventListener('click',function(){
+      var o=it.classList.contains('open');
+      document.querySelectorAll('.faq-i').forEach(function(x){x.classList.remove('open');});
+      if(!o)it.classList.add('open');
+    });
+    w.appendChild(it);
+  });
+})();
+
+/* ═══════════════ FORMULÁRIO ═══════════════ */
+$('f-cpf').addEventListener('input',function(){
+  var v=this.value.replace(/\D/g,'').slice(0,11);
+  if(v.length>9)v=v.slice(0,3)+'.'+v.slice(3,6)+'.'+v.slice(6,9)+'-'+v.slice(9);
+  else if(v.length>6)v=v.slice(0,3)+'.'+v.slice(3,6)+'.'+v.slice(6);
+  else if(v.length>3)v=v.slice(0,3)+'.'+v.slice(3);
+  this.value=v;$('fd-cpf').classList.remove('bad');
+});
+$('f-wpp').addEventListener('input',function(){
+  var v=this.value.replace(/\D/g,'').slice(0,11);
+  if(v.length>7)v='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+  else if(v.length>2)v='('+v.slice(0,2)+') '+v.slice(2);
+  this.value=v;$('fd-wpp').classList.remove('bad');
+});
+['nome','email'].forEach(function(k){$('f-'+k).addEventListener('input',function(){$('fd-'+k).classList.remove('bad');});});
+
+function validarCPF(cpf){
+  cpf=cpf.replace(/\D/g,'');
+  if(cpf.length!==11||/^(\d)\1{10}$/.test(cpf))return false;
+  var s=0,r,i;
+  for(i=1;i<=9;i++)s+=parseInt(cpf[i-1])*(11-i);
+  r=(s*10)%11;if(r===10)r=0;if(r!==parseInt(cpf[9]))return false;
+  s=0;for(i=1;i<=10;i++)s+=parseInt(cpf[i-1])*(12-i);
+  r=(s*10)%11;if(r===10)r=0;return r===parseInt(cpf[10]);
+}
+
+/* Envia o cadastro para o doPost do Apps Script (action: 'salvar').
+   Content-Type text/plain evita o bloqueio de CORS do navegador. */
+function salvarCadastro(dados){
+  if(!API_URL || API_URL.indexOf('COLE_AQUI')===0){
+    console.warn('API_URL não configurada — cadastro não foi salvo na planilha.');
+    return;
+  }
+  fetch(API_URL,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(dados)
+  })
+  .then(function(r){return r.json();})
+  .then(function(res){
+    if(res.status!=='ok') console.warn('Planilha respondeu com erro:',res.msg);
+  })
+  .catch(function(err){console.warn('Falha ao salvar na planilha:',err);});
+}
+
+$('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nome=$('f-nome').value.trim(), wpp=$('f-wpp').value.trim(),
+      email=$('f-email').value.trim(), cpf=$('f-cpf').value.trim(),
+      texto=$('f-queixa').value.trim(), ok=true;
+
+  if(!nome){$('fd-nome').classList.add('bad');ok=false;}
+  if(wpp.replace(/\D/g,'').length<10){$('fd-wpp').classList.add('bad');ok=false;}
+  if(!/^\S+@\S+\.\S+$/.test(email)){$('fd-email').classList.add('bad');ok=false;}
+  if(!validarCPF(cpf)){$('fd-cpf').classList.add('bad');ok=false;}
+  if(!ok)return;
+
+  var sintomas=marcados.map(function(i){return SINTOMAS[i][0];});
+  var jornadas=jornadasMarcadas();
+  var queixa=[sintomas.length?'Marcou: '+sintomas.join(', '):'', jornadas.length?'Jornada provável: '+jornadas.join(', '):'', texto]
+             .filter(Boolean).join(' | ');
+
+  // tira a linha automática "Marquei: ..." para não repetir na mensagem
+  var detalhes=texto.replace(/^Marquei:.*(\n|$)/,'').trim();
+  var msg = GATILHO_AGENDAR+' ✨\n'
+          + '\n📋 *Meus dados*'
+          + '\nNome: '+nome
+          + '\nWhatsApp: '+wpp
+          + '\nE-mail: '+email;
+  if(sintomas.length) msg+='\n\n🩺 *O que sinto*\n• '+sintomas.join('\n• ');
+  if(jornadas.length) msg+='\n\n🧭 *Jornada indicada*\n'+jornadas.join(', ');
+  if(detalhes)        msg+='\n\n💬 *Em minhas palavras*\n'+detalhes;
+  msg+='\n\n_Cadastro feito pelo site._';
+  var link=waUrl(msg);
+
+  // 1º dispara o salvamento (antes de o celular trocar para o app do WhatsApp)
+  salvarCadastro({action:'salvar',nome:nome,cpf:cpf,email:email,whatsapp:wpp,queixa:queixa,tipo:'normal',
+                  timestamp:new Date().toLocaleString('pt-BR',{timeZone:'America/Manaus'})});
+
+  // 2º abre o WhatsApp com a mensagem pronta
+  window.open(link,'_blank');
+
+  $('form').style.display='none';
+  $('ok-link').href=link;
+  $('ok').style.display='block';
+});
+</script>
+</body>
+</html>
