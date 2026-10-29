@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra. Clívia Noronha · Biorressonância e Estética Médica</title>
-<meta name="description" content="Medicina integrativa e estética em Manaus. Avaliação médica de uma hora para investigar a causa antes de qualquer procedimento.">
+<!-- VERSÃO 2.1 · Programas online -->
+<base target="_top">
+<title>Dra. Clívia Noronha · Abordagem integrativa e estética</title>
+<meta name="description" content="Cuidado integrativo em todas as fases da vida. Avaliação médica presencial em Manaus e programas online para todo o Brasil.">
 <!-- Aparência do link quando compartilhado no WhatsApp/Instagram -->
 <meta property="og:title" content="Dra. Clívia Noronha · Soul Beauty Wellness">
-<meta property="og:description" content="A beleza vem de dentro pra fora. Agende sua avaliação médica em Manaus.">
+<meta property="og:description" content="A beleza vem de dentro pra fora. Consulta presencial em Manaus e programas online para todo o Brasil.">
 <meta property="og:image" content="https://clivianoronha.com.br/dra.png">
 <meta property="og:url" content="https://clivianoronha.com.br/">
 <meta property="og:type" content="website">
@@ -41,10 +43,11 @@ a{color:inherit}
 /* ── HEADER ── */
 header{position:sticky;top:0;z-index:50;background:rgba(253,251,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,150,12,.18)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1240px;margin:0 auto}
+.brand{white-space:nowrap;flex-shrink:0}
 .brand b{display:block;font-family:'Marcellus',serif;font-weight:400;font-size:19px;color:var(--ink);line-height:1.1}
 .brand span{font-size:10px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
 .navpill{display:flex;gap:2px;background:var(--champ);border-radius:999px;padding:5px}
-.navpill button{background:none;border:none;padding:9px 14px;border-radius:999px;font-size:14px;color:var(--ink2);white-space:nowrap;transition:.2s}
+.navpill button{background:none;border:none;padding:9px 11px;border-radius:999px;font-size:13.5px;color:var(--ink2);white-space:nowrap;transition:.2s}
 .navpill button:hover{background:#fff;color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:999px;font-weight:700;font-size:15px;padding:16px 30px;text-decoration:none;transition:.2s;line-height:1.25;text-align:center}
 .btn-dark{background:var(--esp);color:var(--cream2)}
@@ -229,7 +232,7 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:14px;color:var(
 .final h2{margin-bottom:12px}
 .final p{color:var(--ink2);max-width:380px;margin:0 auto 26px}
 footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding:40px 0 90px;margin-top:40px}
-.ft{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ft{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .ft h4{font-family:'Marcellus',serif;font-weight:400;color:var(--ink);font-size:17px;margin-bottom:8px}
 .ft p,.ft a{font-size:13.5px;color:var(--ink2);text-decoration:none;display:block}
 .disc{border-top:1px solid rgba(184,150,12,.25);margin-top:26px;padding-top:16px;font-size:12px;color:var(--ink3);max-width:520px}
@@ -242,9 +245,46 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
 .wa-float svg{width:30px;height:30px;fill:#fff}
 @keyframes pulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
 
+/* ── v2.0 · DUAS PORTAS ── */
+.portas-wrap{max-width:1100px;margin:0 auto 28px;padding:0}
+.portas-tit{text-align:center;margin-bottom:22px}
+.portas-tit h2{margin-bottom:6px}
+.portas-tit p{color:var(--ink2);font-size:16px}
+.portas{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.porta{background:#fff;border-radius:var(--r);padding:34px 32px 30px;box-shadow:var(--shadow);display:flex;flex-direction:column;border-top:3px solid var(--gl);position:relative}
+.porta.online{background:linear-gradient(150deg,var(--champ) 0%,var(--champ2) 100%)}
+.porta small{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.porta h3{font-size:28px;line-height:1.15;margin:8px 0 10px;color:var(--ink)}
+.porta p{font-size:15px;color:var(--ink2);margin-bottom:16px}
+.porta .check{margin-bottom:24px}
+.porta .btn{margin-top:auto;width:100%}
+.porta .alt{display:block;text-align:center;margin-top:12px;font-size:13.5px;font-weight:600;color:var(--gd);background:none;border:none;text-decoration:underline;text-underline-offset:3px}
+.ponte{text-align:center;font-family:'Marcellus',serif;font-size:clamp(17px,2vw,20px);color:var(--gd);max-width:640px;margin:24px auto 0;line-height:1.45}
+
+/* ── v2.0 · PROGRAMAS ONLINE ── */
+.aviso-edu{display:flex;gap:10px;align-items:flex-start;background:#fff;border-left:3px solid var(--gold);border-radius:12px;padding:13px 16px;font-size:13.5px;color:var(--ink2);margin-bottom:24px;max-width:640px}
+.aviso-edu b{color:var(--ink)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pcard{background:#fff;border-radius:18px;padding:24px 22px 22px;display:flex;flex-direction:column;box-shadow:0 10px 30px -22px rgba(122,96,8,.5);border:1px solid rgba(184,150,12,.14);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+a.pcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px -20px rgba(122,96,8,.55)}
+.pcard .nm{font-family:'Marcellus',serif;font-size:23px;color:var(--ink);line-height:1.1}
+.pcard .nm em{font-style:italic;color:var(--gold)}
+.pcard .pq{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:8px 0 10px}
+.pcard .bf{font-size:14.5px;color:var(--ink2);margin-bottom:18px}
+.pcard .pr{display:flex;align-items:baseline;gap:4px;margin:auto 0 14px;font-size:13px;color:var(--ink3)}
+.pcard .pr b{font-family:'Marcellus',serif;font-weight:400;font-size:26px;color:var(--ink)}
+.pcard .btn{width:100%;padding:14px 20px;font-size:14px}
+.pcard.breve{background:transparent;border:1.5px dashed rgba(184,150,12,.4);box-shadow:none}
+.selo{display:inline-block;align-self:flex-start;background:var(--gp);color:var(--gd);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:5px 12px;margin-top:auto}
+.pfecho{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border-radius:16px;padding:20px 24px}
+.pfecho p{font-size:15px;color:var(--ink2);max-width:560px}
+.pfecho p b{color:var(--ink)}
+.ft-online a{margin-bottom:2px}
+
 /* ── RESPONSIVO ── */
+@media(max-width:1200px){.navpill{display:none}}
 @media(max-width:1000px){
-  .navpill{display:none}
+  .pgrid,.ft{grid-template-columns:1fr 1fr}
   .hero{grid-template-columns:1fr;padding:40px 20px 110px}
   .hero-img{justify-self:center}
   .aval-card{left:auto;right:-10px}
@@ -272,6 +312,30 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
   .wa-float{right:14px;bottom:14px;padding:0}
   .wa-float .lbl{display:none}
   .resumo .btn{width:100%}
+  .portas,.pgrid{grid-template-columns:1fr}
+  .portas-wrap{margin:0 12px 18px}
+  .porta{padding:28px 22px 24px}
+  .porta h3{font-size:24px}
+  .pfecho .btn{width:100%}
+}
+
+/* ── v2.1 · EFEITOS DE ENTRADA (só ativam se o JavaScript rodar) ── */
+.anim .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim .rv.rv-e{transform:translateX(-46px)}
+.anim .rv.rv-d{transform:translateX(46px)}
+.anim .rv.rv-z{transform:scale(.94)}
+.anim .rv.in{opacity:1;transform:none}
+.foto img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.anim .hero-img .foto img{transform:scale(1.12)}
+.anim .hero-img.in .foto img{transform:scale(1)}
+.foto:hover img{transform:scale(1.04)}
+.exp-c .im{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.exp-c:hover .im{transform:scale(1.06)}
+.flutua{animation:flutua 6s ease-in-out infinite}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@media (prefers-reduced-motion:reduce){
+  .anim .rv,.anim .hero-img .foto img{opacity:1!important;transform:none!important;transition:none!important}
+  .flutua{animation:none}
 }
 </style>
 </head>
@@ -285,7 +349,8 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
       <button data-go="s-sinto">O que sinto</button>
       <button data-go="s-exp">A experiência</button>
       <button data-go="s-como">Como funciona</button>
-      <button data-go="s-jornadas">As jornadas</button>
+      <button data-go="s-jornadas">Jornadas presenciais</button>
+      <button data-go="s-online">Programas online</button>
       <button data-go="s-sobre">Sobre mim</button>
       <button data-go="s-faq">Dúvidas</button>
       <button data-go="s-onde">Onde estou</button>
@@ -297,12 +362,12 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
 <!-- ════════ HERO ════════ -->
 <div class="hero">
   <div>
-    <div class="eyebrow">Medicina integrativa e estética · Manaus</div>
+    <div class="eyebrow">Abordagem integrativa · Manaus e todo o Brasil</div>
     <h1>A beleza vem <em>de dentro pra fora.</em></h1>
-    <p>Reequilibrar e desinflamar o organismo antes de tratar o que aparece no espelho. É assim que eu trabalho — investigando a causa, e só depois falando de procedimento.</p>
+    <p>Cuidado integrativo em todas as fases da vida, da infância à maturidade, por dentro e por fora. Você pode começar por um programa online, no seu ritmo e de onde estiver, ou viver uma jornada personalizada comigo, presencialmente em Manaus.</p>
     <div class="hero-btns">
       <button class="btn btn-dark" data-go="s-form">Agendar minha avaliação médica</button>
-      <button class="btn btn-ghost" data-go="s-sinto">Descobrir minha jornada</button>
+      <button class="btn btn-ghost" data-go="s-online">Conhecer os programas online</button>
     </div>
   </div>
   <div class="hero-img">
@@ -318,6 +383,40 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
     </div>
   </div>
 </div>
+
+<!-- ════════ v2.0 · DUAS PORTAS ════════ -->
+<section id="s-portas" class="portas-wrap">
+  <div class="portas-tit">
+    <h2>Por onde você quer começar?</h2>
+    <p>Dois caminhos, o mesmo cuidado de dentro pra fora.</p>
+  </div>
+  <div class="portas">
+    <div class="porta online">
+      <small>Para todo o Brasil</small>
+      <h3>Programas online</h3>
+      <p><b>Comece agora, de onde estiver.</b> Programas guiados por mim, no celular, para dar o primeiro passo no seu ritmo.</p>
+      <ul class="check">
+        <li>Assinatura mensal, a partir de R$ 19,90</li>
+        <li>Para mulheres, homens, gestantes e crianças</li>
+        <li>Conteúdo educativo, sem sair de casa</li>
+      </ul>
+      <button class="btn btn-gold" data-go="s-online">Conhecer os programas online</button>
+    </div>
+    <div class="porta">
+      <small>Presencial · Manaus</small>
+      <h3>Jornada personalizada</h3>
+      <p><b>Um plano feito só para você.</b> Avaliação médica de uma hora e uma jornada de quatro meses montada a partir do seu caso.</p>
+      <ul class="check">
+        <li>Uma hora de avaliação, só sobre você</li>
+        <li>Exames antes de qualquer procedimento</li>
+        <li>Retornos marcados e canal aberto comigo</li>
+      </ul>
+      <button class="btn btn-dark" data-go="s-form">Agendar avaliação em Manaus</button>
+      <button class="alt" data-go="s-sinto">ou descubra sua jornada pelo que você sente</button>
+    </div>
+  </div>
+  <p class="ponte">Muitas pessoas começam por um programa online e, quando sentem que precisam de um olhar individual, seguem para a jornada presencial. Os dois se complementam.</p>
+</section>
 
 <!-- ════════ SOUL · BEAUTY · WELLNESS ════════ -->
 <div class="block pilares">
@@ -458,9 +557,21 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
 
 <!-- ════════ AS JORNADAS ════════ -->
 <section id="s-jornadas" class="block light goldline">
-  <h2>As jornadas</h2>
-  <p class="sub">Cada uma dura quatro meses e começa pela mesma avaliação. O caminho é que muda.</p>
+  <h2>Jornadas personalizadas presenciais</h2>
+  <p class="sub">Para quem está em Manaus ou pode vir até aqui. Cada uma dura quatro meses e começa pela mesma avaliação. O caminho é que muda.</p>
   <div class="jgrid" id="jgrid"></div>
+</section>
+
+<!-- ════════ v2.0 · PROGRAMAS ONLINE ════════ -->
+<section id="s-online" class="block champ goldline">
+  <h2>Programas online</h2>
+  <p class="sub">Uma forma de começar a cuidar de você hoje, com orientação de quem atende no consultório. De qualquer lugar do Brasil, no seu celular.</p>
+  <div class="aviso-edu"><span>ⓘ</span><span><b>Programas educativos.</b> Não substituem a consulta médica individual.</span></div>
+  <div class="pgrid" id="pgrid"></div>
+  <div class="pfecho">
+    <p><b>Quer um plano individual, com avaliação e exames?</b> Conheça a jornada personalizada presencial, em Manaus.</p>
+    <button class="btn btn-dark" data-go="s-form">Agendar avaliação em Manaus</button>
+  </div>
 </section>
 
 <!-- ════════ APLICATIVO ════════ -->
@@ -490,9 +601,9 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
     <div class="foto"><img data-img="dra" alt="Dra. Clívia Noronha"></div>
     <div>
       <h2>Quem vai te atender</h2>
-      <p><b>Dra. Clívia Noronha</b>, médica formada pela Universidade do Estado do Amazonas, CRM/AM 9.190. Atende em Manaus, no Cristal Tower.</p>
+      <p><b>Dra. Clívia Noronha</b>, médica formada pela Universidade do Estado do Amazonas, CRM-AM 9.190, RQE 6182. Atende presencialmente em Manaus, no Cristal Tower, e conduz os programas online para todo o Brasil.</p>
       <p>Beleza de dentro para fora: reequilibrar e desinflamar o organismo, e só então associar procedimento estético dentro de uma jornada.</p>
-      <div class="tags"><span class="tag">CRM/AM 9.190</span><span class="tag">Medicina integrativa</span><span class="tag">Manaus · AM</span></div>
+      <div class="tags"><span class="tag">CRM-AM 9.190 · RQE 6182</span><span class="tag">Abordagem integrativa</span><span class="tag">Manaus e online</span></div>
     </div>
   </div>
 </section>
@@ -544,13 +655,23 @@ footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding
 <footer>
   <div class="wrap">
     <div class="ft">
-      <div><h4>Dra. Clívia Noronha</h4><p>Médica · CRM/AM 9.190</p><p>Universidade do Estado do Amazonas</p></div>
+      <div><h4>Dra. Clívia Noronha</h4><p>Médica · CRM-AM 9.190 · RQE 6182</p><p>Abordagem integrativa</p><p>Universidade do Estado do Amazonas</p></div>
       <div><h4>Soul Beauty Wellness</h4><p>Cristal Tower, sala 303 · Adrianópolis</p><p>Manaus · AM</p></div>
+      <div class="ft-online" id="ft-online"><h4>Programas online</h4></div>
       <div><h4>Contato</h4><a class="wa-link" target="_blank" rel="noopener">(92) 98202-9883</a><a href="https://www.instagram.com/draclivianoronha" target="_blank" rel="noopener">@draclivianoronha</a></div>
     </div>
-    <p class="disc">Conteúdo informativo. Não substitui consulta, diagnóstico ou tratamento médico. Resultados variam conforme cada paciente e sua condição clínica.</p>
+    <p class="disc">Conteúdo informativo. Não substitui consulta, diagnóstico ou tratamento médico. Resultados variam conforme cada paciente e sua condição clínica. Os programas online são educativos e não substituem a consulta médica individual.</p>
   </div>
 </footer>
+
+<!-- ════════ FOTOS EMBUTIDAS (só funcionam no Apps Script) ════════
+     No GitHub estas linhas ficam como texto e o site usa os arquivos dra.png etc.
+     No Apps Script, cada uma recebe o conteúdo do arquivo "Img ..." correspondente. -->
+<script type="text/plain" id="emb-dra"><?!= incluirImg('Img dra') ?></script>
+<script type="text/plain" id="emb-consulta"><?!= incluirImg('Img consulta') ?></script>
+<script type="text/plain" id="emb-app"><?!= incluirImg('Imagem app') ?></script>
+<script type="text/plain" id="emb-massagem"><?!= incluirImg('Imagem msg') ?></script>
+<script type="text/plain" id="emb-spa"><?!= incluirImg('Imagem Spa') ?></script>
 
 <!-- ════════ BOTÃO WHATSAPP SEMPRE NA TELA ════════ -->
 <a class="wa-float wa-link" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
@@ -592,7 +713,20 @@ function avisoFoto(k,txt){
     box.appendChild(d);
   });
 }
+/* v2.0: no Apps Script a foto vem embutida (data:image...). Se existir, usa ela. */
+function fotoEmbutida(k){
+  var el=document.getElementById('emb-'+k);
+  var t=el?el.textContent.replace(/\s+/g,''):'';
+  return t.indexOf('data:image')===0 ? t : '';
+}
+function aplicaFoto(k,url){
+  document.querySelectorAll('[data-img="'+k+'"]').forEach(function(el){el.src=url;});
+  document.querySelectorAll('[data-bg="'+k+'"]').forEach(function(el){el.style.backgroundImage='url("'+url+'")';});
+}
 Object.keys(FOTOS).forEach(function(k){
+  var emb=fotoEmbutida(k);
+  if(!emb && k==='spa') emb=fotoEmbutida('massagem');
+  if(emb){ aplicaFoto(k,emb); return; }
   var tentativas=[];
   FOTOS[k].forEach(function(nome){EXTENSOES.forEach(function(ext){tentativas.push(nome+ext);});});
   (function tenta(i){
@@ -613,8 +747,8 @@ var JORNADAS = {
   renew:   {t:'Jornada Renew',         cat:'Pele do rosto',    d:'Renovação profunda para flacidez, rugas e manchas, com estímulo de colágeno até o resultado assentar.'},
   capilar: {t:'Jornada Capilar',       cat:'Cabelo e barba',   d:'Queda, fio afinando ou barba rala. Tratamento do couro cabeludo dentro de sessões de spa.'},
   signature:{t:'Jornada Signature',    cat:'Contorno facial',  d:'Definição e contorno devolvidos aos poucos, sem mudar o seu traço.'},
-  curve:   {t:'Jornada Curve',         cat:'Corpo',            d:'Trata a causa da celulite: as fibras que puxam a pele por dentro e formam os furinhos.'},
-  acne:    {t:'Jornada Acne Control',  cat:'Acne adulta',      d:'Acne adulta não se resolve secando a pele. Investigo o que inflama por dentro até estabilizar.'},
+  curve:   {t:'Jornada Curve',         cat:'Corpo',            d:'Olha para o que está por trás da celulite: as fibras que puxam a pele por dentro e formam os furinhos.'},
+  acne:    {t:'Jornada Acne Control',  cat:'Acne adulta',      d:'Acne adulta não se resolve só secando a pele. Investigo o que inflama por dentro e acompanho de perto a evolução.'},
   balance: {t:'Jornada Balance',       cat:'Metabolismo e energia', d:'Metabolismo lento, inchaço e retenção. Investigo sono, intestino e inflamação para devolver o equilíbrio.'}
 };
 var SINTOMAS = [
@@ -640,6 +774,47 @@ var FAQ = [
     'Provavelmente consegue. A diferença está no que vem junto: avaliação médica, exames, retornos já marcados, aplicativo e canal aberto comigo durante os quatro meses.',
     'Você paga por um caminho acompanhado, não por uma sessão isolada.']]
 ];
+
+/* ═══════════════ v2.0 · PROGRAMAS ONLINE ═══════════════
+   Para mudar preço, texto ou link, edite só aqui.
+   "pagina" é o arquivo de cada programa, ao lado deste index.html no GitHub. */
+var SITE_GITHUB = 'https://dermatoclinoronha-netizen.github.io/clivianoronha/';
+var PROGRAMAS = [
+  {id:'soul-capilar',   nome:'Soul <em>Capilar</em>',   para:'Homens e mulheres · cabelo ralo ou queda',
+   bf:'Entenda o que influencia a saúde dos fios e organize uma rotina de cuidado.', preco:'R$ 37', per:'/mês'},
+  {id:'soul-mulher',    nome:'Soul <em>Mulher</em>',    para:'Da adolescência à menopausa',
+   bf:'Informação clara para cada fase hormonal da vida da mulher.', preco:'R$ 37', per:'/mês'},
+  {id:'soul-emocional', nome:'Soul <em>Emocional</em>', para:'Homens e mulheres · equilíbrio emocional',
+   bf:'Mandalas, áudios, diário e desafios para criar pausas no dia a dia.', preco:'R$ 37', per:'/mês'},
+  {id:'soul-mom',       nome:'Soul <em>Mom</em>',       para:'Gestantes e puérperas',
+   bf:'Apoio e informação para a gestação e os primeiros meses com o bebê.', preco:'R$ 37', per:'/mês'},
+  {id:'soul-kids',      nome:'Soul <em>Kids</em>',      para:'Pais de crianças de 1 a 10 anos',
+   bf:'Histórias, respiração do balão e pintura para o bem-estar emocional, com uma área para os pais.', preco:'R$ 19,90', per:'/mês'},
+  {id:'soul-store',     nome:'Soul <em>Store</em>',     para:'Em breve',
+   bf:'A loja das coisas que o dinheiro não compra.', breve:true}
+];
+/* No GitHub o link é relativo; no Apps Script aponta para o site no GitHub. */
+function linkPrograma(id){
+  var noSite=/github\.io|clivianoronha\.com|^$|localhost/.test(location.hostname) || location.protocol==='file:';
+  return (noSite?'':SITE_GITHUB)+id+'.html';
+}
+(function(){
+  var g=document.getElementById('pgrid'), ft=document.getElementById('ft-online');
+  PROGRAMAS.forEach(function(p){
+    var c;
+    if(p.breve){
+      c=document.createElement('div');c.className='pcard breve';
+      c.innerHTML='<div class="nm">'+p.nome+'</div><div class="pq">'+p.para+'</div><p class="bf">'+p.bf+'</p><span class="selo">Em breve</span>';
+    }else{
+      c=document.createElement('a');c.className='pcard';c.href=linkPrograma(p.id);c.target='_top';
+      c.innerHTML='<div class="nm">'+p.nome+'</div><div class="pq">'+p.para+'</div><p class="bf">'+p.bf+'</p>'+
+        '<div class="pr"><b>'+p.preco+'</b>'+p.per+' · assinatura</div><span class="btn btn-dark">Quero conhecer</span>';
+      var a=document.createElement('a');a.href=linkPrograma(p.id);a.target='_top';a.innerHTML=p.nome.replace(/<\/?em>/g,'');
+      ft.appendChild(a);
+    }
+    g.appendChild(c);
+  });
+})();
 
 /* ═══════════════ HELPERS ═══════════════ */
 function $(id){return document.getElementById(id);}
@@ -811,6 +986,39 @@ $('form').addEventListener('submit',function(e){
   $('ok-link').href=link;
   $('ok').style.display='block';
 });
+
+/* ═══════════ v2.1 · EFEITOS DE ENTRADA AO ROLAR ═══════════
+   Cada item marcado em ALVOS desliza para dentro da tela quando aparece.
+   rv = sobe · rv-e = vem da esquerda · rv-d = vem da direita · rv-z = cresce */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var ALVOS=[
+    ['.hero > div:first-child','rv-e'],['.hero-img','rv-d'],
+    ['.portas-tit','rv'],['.porta','rv','grupo'],['.ponte','rv'],
+    ['.pilar','rv','grupo'],['.block > h2','rv'],['.block > .sub','rv'],
+    ['.chip','rv','grupo'],['.exp-c','rv-z','grupo'],['.mes','rv','grupo'],['.box','rv','grupo'],
+    ['.jcard','rv','grupo'],['.pcard','rv','grupo'],['.feat','rv','grupo'],['.phone','rv-d'],
+    ['.sobre .foto','rv-e'],['.quem .foto','rv-e'],['.card','rv','grupo'],['.passo','rv','grupo'],
+    ['.faq-i','rv','grupo'],['.form-l','rv-e'],['.form-r','rv-d'],['.info','rv','grupo'],['.lista li','rv','grupo'],
+    ['.final > *','rv','grupo'],['.meio > *','rv','grupo']
+  ];
+  document.documentElement.classList.add('anim');
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  ALVOS.forEach(function(a){
+    document.querySelectorAll(a[0]).forEach(function(el,i){
+      if(el.classList.contains('rv')) return;
+      el.classList.add('rv'); if(a[1]!=='rv') el.classList.add(a[1]);
+      if(a[2]) el.style.setProperty('--d',((i%4)*0.12)+'s');
+      io.observe(el);
+    });
+  });
+  setTimeout(function(){document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+    var r=el.getBoundingClientRect(); if(r.top<innerHeight) el.classList.add('in');
+  });},60);
+  document.querySelectorAll('.aval-card,.phone').forEach(function(el){el.classList.add('flutua');});
+})();
 </script>
 </body>
 </html>

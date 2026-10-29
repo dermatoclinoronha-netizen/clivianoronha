@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- VERSÃO 2.1 · Página do programa Soul Kids -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soul Kids · Programa online · Dra. Clívia Noronha</title>
+<meta name="description" content="App de bem-estar emocional da Dra. Clívia Noronha para crianças de 1 a 10 anos. Assinatura mensal.">
+<meta property="og:title" content="Soul Kids · Dra. Clívia Noronha">
+<meta property="og:description" content="App de bem-estar emocional da Dra. Clívia Noronha para crianças de 1 a 10 anos. Assinatura mensal.">
+<meta property="og:image" content="https://clivianoronha.com.br/dra.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FDFBF4;--champ:#F6EEDF;--champ2:#EADCC3;
+  --gold:#B8960C;--gl:#D4AF37;--gd:#7A6008;--gp:#F5EFC0;
+  --esp:#2C2518;--esp3:#3A2E1A;
+  --ink:#2F261A;--ink2:#6B5D42;--ink3:#9B8A65;
+  --r:22px;--shadow:0 20px 50px -26px rgba(122,96,8,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',-apple-system,sans-serif;color:var(--ink);line-height:1.6;
+  background:var(--cream) radial-gradient(rgba(184,150,12,.09) 1px,transparent 1px) 0 0/22px 22px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Marcellus',Georgia,serif;font-weight:400}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(253,251,244,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(184,150,12,.18)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1240px;margin:0 auto}
+.brand{text-decoration:none}
+.brand b{display:block;font-family:'Marcellus',serif;font-weight:400;font-size:19px;color:var(--ink);line-height:1.1}
+.brand span{font-size:10px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:999px;font-weight:700;font-size:16px;padding:17px 32px;text-decoration:none;transition:.2s;line-height:1.25;text-align:center;cursor:pointer;font-family:inherit}
+.btn-dark{background:var(--esp);color:#F8F3E3}
+.btn-dark:hover{background:var(--esp3)}
+.btn-gold{background:linear-gradient(135deg,var(--gl),var(--gold));color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.12)}
+.btn-gold:hover{filter:brightness(1.05)}
+.btn-ghost{background:#fff;border:1.5px solid var(--champ2);color:var(--ink)}
+.hd .btn{padding:11px 22px;font-size:14px}
+
+/* topo */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:60px 24px 70px;max-width:1100px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-bottom:16px}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(44px,6.5vw,72px);line-height:1;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .lead{font-size:19px;color:var(--ink2);max-width:540px;margin-bottom:26px}
+.preco{display:flex;align-items:baseline;gap:6px;margin-bottom:18px;color:var(--ink3);font-size:14px}
+.preco b{font-family:'Marcellus',serif;font-weight:400;font-size:38px;color:var(--ink);line-height:1}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.seguro{font-size:12.5px;color:var(--ink3);margin-top:12px}
+.aviso-edu{display:flex;gap:10px;align-items:flex-start;background:#fff;border-left:3px solid var(--gold);border-radius:12px;padding:13px 16px;font-size:13.5px;color:var(--ink2);margin-top:24px;max-width:540px}
+.aviso-edu b{color:var(--ink)}
+
+.phone{justify-self:center;width:250px;background:linear-gradient(160deg,var(--gl),var(--gold));border-radius:34px;padding:12px;box-shadow:0 30px 50px -20px rgba(122,96,8,.55)}
+.phone .scr{background:var(--cream);border-radius:24px;padding:24px 18px 18px}
+.phone small{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.phone h5{font-family:'Marcellus',serif;font-weight:400;font-size:22px;margin:4px 0 14px}
+.phone h5 em{color:var(--gold)}
+.step{display:flex;gap:10px;padding:11px 0;border-top:1px solid var(--champ2)}
+.step i{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:6px;flex-shrink:0}
+.step b{display:block;font-size:13px;font-weight:600;line-height:1.4}
+
+/* blocos */
+section{scroll-margin-top:90px}
+.block{border-radius:var(--r);padding:52px;margin:0 auto 24px;max-width:1100px;position:relative}
+.champ{background:linear-gradient(150deg,var(--champ) 0%,var(--champ2) 100%);box-shadow:var(--shadow)}
+.light{background:#fff;box-shadow:var(--shadow)}
+.goldline::before{content:'';position:absolute;top:0;left:52px;right:52px;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+h2{font-size:clamp(28px,3.6vw,40px);line-height:1.12;margin-bottom:12px}
+.sub{font-size:16px;color:var(--ink2);max-width:560px;margin-bottom:26px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:#fff;border-radius:18px;padding:26px 26px 22px}
+.card.nao{background:rgba(255,255,255,.55);border:1.5px dashed rgba(184,150,12,.35)}
+.card h3{font-size:22px;margin-bottom:14px}
+.lista{list-style:none;display:flex;flex-direction:column;gap:11px}
+.lista li{display:flex;gap:11px;font-size:15px;color:var(--ink2);line-height:1.5}
+.lista li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
+.nao .lista li::before{content:'—';color:var(--ink3)}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.passo{background:linear-gradient(150deg,var(--cream),var(--champ));border-radius:16px;padding:20px}
+.passo small{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--gold)}
+.passo h4{font-size:16px;margin:4px 0 4px}
+.passo p{font-size:13.5px;color:var(--ink2)}
+.meio{text-align:center;padding:44px 32px;background:linear-gradient(135deg,var(--gp),var(--champ2));box-shadow:var(--shadow)}
+.meio h2{margin-bottom:8px}
+.meio p{color:var(--ink2);margin:0 auto 22px;max-width:460px}
+
+.quem{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:center}
+.foto{position:relative;border-radius:var(--r);overflow:hidden;background:var(--champ2);aspect-ratio:4/5;box-shadow:var(--shadow);max-width:340px}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.foto img:not([src]){visibility:hidden}
+.quem p{color:var(--ink2);margin-bottom:14px}
+.quem p b{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#fff;color:var(--gd);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700}
+
+.faq-i{background:linear-gradient(150deg,var(--cream),var(--champ));border-radius:16px;margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:none;padding:19px 22px;font-family:'Marcellus',serif;font-size:18px;color:var(--ink);text-align:left;cursor:pointer}
+.faq-q em{font-style:normal}
+.faq-q span{transition:transform .25s;color:var(--gold);font-family:'Mulish';font-size:14px}
+.faq-i.open .faq-q span{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 22px 18px;max-width:640px}
+.faq-i.open .faq-a{display:block}
+.faq-a p{font-size:14.5px;color:var(--ink2)}
+
+.final{text-align:center;padding:56px 36px}
+.final .aviso-edu{margin:22px auto 0;text-align:left}
+.alem{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.alem p{color:var(--ink2);max-width:560px}
+.alem p b{color:var(--ink)}
+.mais{text-align:center;margin:8px 0 0}
+.mais a{font-weight:700;color:var(--gd);text-underline-offset:3px}
+
+footer{background:var(--champ);border-top:1px solid rgba(184,150,12,.25);padding:36px 0 110px;margin-top:36px}
+.ft{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ft h4{font-family:'Marcellus',serif;font-weight:400;font-size:17px;margin-bottom:8px}
+.ft p,.ft a{font-size:13.5px;color:var(--ink2);text-decoration:none;display:block}
+.disc{border-top:1px solid rgba(184,150,12,.25);margin-top:24px;padding-top:14px;font-size:12px;color:var(--ink3);max-width:620px}
+
+/* barra fixa de compra (celular) */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(253,251,244,.97);backdrop-filter:blur(8px);border-top:1px solid rgba(184,150,12,.25);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .3s}
+.barra.on{transform:none}
+.barra .pz{font-size:12px;color:var(--ink3);line-height:1.2}
+.barra .pz b{display:block;font-family:'Marcellus',serif;font-weight:400;font-size:21px;color:var(--ink)}
+.barra .btn{padding:13px 24px;font-size:15px}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding:34px 20px 40px;gap:32px}
+  .passos{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .hd{padding:12px 16px}
+  .brand b{font-size:17px}
+  .hd .btn{display:none}
+  .hero .lead{font-size:17px}
+  .cta-row .btn{width:100%}
+  .block{padding:34px 22px;border-radius:18px;margin:0 12px 16px}
+  .goldline::before{left:22px;right:22px}
+  .duo,.quem,.ft{grid-template-columns:1fr}
+  .passos{grid-template-columns:1fr}
+  .foto{max-width:280px}
+  .meio .btn,.final .btn,.alem .btn{width:100%}
+  .barra{display:flex}
+}
+
+/* ── v2.1 · EFEITOS DE ENTRADA (só ativam se o JavaScript rodar) ── */
+.anim .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim .rv.rv-e{transform:translateX(-46px)}
+.anim .rv.rv-d{transform:translateX(46px)}
+.anim .rv.rv-z{transform:scale(.94)}
+.anim .rv.in{opacity:1;transform:none}
+.foto img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.anim .hero-img .foto img{transform:scale(1.12)}
+.anim .hero-img.in .foto img{transform:scale(1)}
+.foto:hover img{transform:scale(1.04)}
+.exp-c .im{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.exp-c:hover .im{transform:scale(1.06)}
+.flutua{animation:flutua 6s ease-in-out infinite}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@media (prefers-reduced-motion:reduce){
+  .anim .rv,.anim .hero-img .foto img{opacity:1!important;transform:none!important;transition:none!important}
+  .flutua{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <a class="brand" href="index.html"><b>Dra. Clívia Noronha</b><span>Soul Beauty Wellness</span></a>
+    <a class="btn btn-dark js-comprar" href="https://pay.kiwify.com.br/KG3e7pO">Assinar Soul Kids</a>
+  </div>
+</header>
+
+<!-- ════════ TOPO ════════ -->
+<div class="hero">
+  <div>
+    <div class="eyebrow">Programa online · todo o Brasil</div>
+    <h1>Soul <em>Kids</em></h1>
+    <p class="lead">Um app de bem-estar emocional para crianças de 1 a 10 anos, com histórias, respiração e pintura, e uma área para os pais.</p>
+    <div class="preco"><b>R$ 19,90</b> por mês · assinatura</div>
+    <div class="cta-row">
+      <a class="btn btn-gold js-comprar" id="cta-topo" href="https://pay.kiwify.com.br/KG3e7pO">Quero assinar</a>
+      <a class="btn btn-ghost" href="#como">Como funciona</a>
+    </div>
+    <p class="seguro">Pagamento seguro pela Kiwify · 7 dias de garantia · cancele quando quiser</p>
+    <div class="aviso-edu"><span>ⓘ</span><span><b>Programa educativo.</b> Não substitui a consulta médica individual.</span></div>
+  </div>
+  <div class="phone"><div class="scr">
+    <small>DENTRO DO PROGRAMA</small>
+    <h5>Soul <em>Kids</em></h5>
+        <div class="step"><i class="g"></i><div><b>Histórias para conversar sobre emoções</b></div></div>
+        <div class="step"><i class="g"></i><div><b>Respiração do balão, para momentos de agitação</b></div></div>
+        <div class="step"><i class="g"></i><div><b>Atividades de pintura</b></div></div>
+        <div class="step"><i class="g"></i><div><b>Área dos pais, com orientações para acompanhar a criança</b></div></div>
+  </div></div>
+</div>
+
+<!-- ════════ PARA QUEM É ════════ -->
+<section class="block champ">
+  <h2>Para quem é</h2>
+  <p class="sub">O programa ajuda mais quando está no lugar certo. Veja se ele combina com o seu momento.</p>
+  <div class="duo">
+    <div class="card">
+      <h3>É para</h3>
+      <ul class="lista">
+          <li>Pais e responsáveis de crianças de 1 a 10 anos</li>
+          <li>Famílias que querem momentos de calma e conexão no dia a dia</li>
+          <li>Quem quer apresentar as emoções à criança de forma lúdica</li>
+      </ul>
+    </div>
+    <div class="card nao">
+      <h3>Antes de assinar, saiba</h3>
+      <ul class="lista">
+          <li>O app não substitui o acompanhamento com o pediatra ou com o psicólogo infantil</li>
+          <li>Se a criança tem mudanças de comportamento que preocupam, procure avaliação profissional</li>
+          <li>Foi pensado para ser usado junto com um adulto, e não como tela livre</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ O QUE RECEBE ════════ -->
+<section id="como" class="block light goldline">
+  <h2>O que você recebe</h2>
+  <ul class="lista" style="margin:6px 0 34px;max-width:640px">
+          <li>Histórias para conversar sobre emoções</li>
+          <li>Respiração do balão, para momentos de agitação</li>
+          <li>Atividades de pintura</li>
+          <li>Área dos pais, com orientações para acompanhar a criança</li>
+  </ul>
+  <h2 style="font-size:clamp(24px,3vw,32px)">Como funciona</h2>
+  <div class="passos">
+    <div class="passo"><small>1</small><h4>Assine</h4><p>Pagamento seguro pela Kiwify, em poucos minutos.</p></div>
+    <div class="passo"><small>2</small><h4>Receba o acesso</h4><p>O login chega no seu e-mail logo após a confirmação.</p></div>
+    <div class="passo"><small>3</small><h4>Use no seu ritmo</h4><p>Pelo celular, quando e onde for melhor para você.</p></div>
+    <div class="passo"><small>4</small><h4>Sem amarras</h4><p>Cancele quando quiser, sem multa.</p></div>
+  </div>
+</section>
+
+<!-- ════════ COMPRA · MEIO ════════ -->
+<div class="block meio">
+  <h2>Comece hoje, de onde estiver</h2>
+  <p>Soul Kids por <b>R$ 19,90 por mês</b>. 7 dias de garantia.</p>
+  <a class="btn btn-dark js-comprar" href="https://pay.kiwify.com.br/KG3e7pO">Quero assinar Soul Kids</a>
+</div>
+
+<!-- ════════ QUEM CONDUZ ════════ -->
+<section class="block champ">
+  <div class="quem">
+    <div class="foto"><img data-img="dra" alt="Dra. Clívia Noronha"></div>
+    <div>
+      <h2>Quem conduz</h2>
+      <p><b>Dra. Clívia Noronha</b>, médica com abordagem integrativa, formada pela Universidade do Estado do Amazonas. CRM-AM 9.190 · RQE 6182.</p>
+      <p>No consultório, em Manaus, atende com avaliações de uma hora e jornadas personalizadas. Nos programas online, leva essa mesma forma de olhar, de dentro pra fora, para quem está em qualquer lugar do Brasil.</p>
+      <div class="tags"><span class="tag">CRM-AM 9.190 · RQE 6182</span><span class="tag">Abordagem integrativa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DÚVIDAS ════════ -->
+<section class="block light goldline">
+  <h2>Perguntas frequentes</h2>
+  <div style="margin-top:20px">
+      <div class="faq-i open"><button class="faq-q" type="button"><em>Como recebo o acesso?</em><span>⌄</span></button><div class="faq-a"><p>Logo depois da confirmação do pagamento, a Kiwify envia o acesso para o seu e-mail. Confira também a caixa de spam.</p></div></div>
+      <div class="faq-i"><button class="faq-q" type="button"><em>Por quanto tempo tenho acesso?</em><span>⌄</span></button><div class="faq-a"><p>Enquanto a sua assinatura estiver ativa. A cobrança é mensal e renova automaticamente.</p></div></div>
+      <div class="faq-i"><button class="faq-q" type="button"><em>Como cancelo?</em><span>⌄</span></button><div class="faq-a"><p>Quando quiser, pela área do cliente da Kiwify, sem multa. O acesso continua até o fim do período já pago.</p></div></div>
+      <div class="faq-i"><button class="faq-q" type="button"><em>Tem garantia?</em><span>⌄</span></button><div class="faq-a"><p>Sim. Você tem 7 dias para testar. Se não for para você, pede o reembolso pela própria Kiwify.</p></div></div>
+      <div class="faq-i"><button class="faq-q" type="button"><em>Substitui a consulta médica?</em><span>⌄</span></button><div class="faq-a"><p>Não. É um programa educativo. Se você precisa de avaliação, exames ou um plano individual, a jornada personalizada é presencial, em Manaus.</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ COMPRA · FINAL ════════ -->
+<div class="block champ final">
+  <h2>Soul <em class="serif" style="color:var(--gold)">Kids</em></h2>
+  <p class="sub" style="margin:0 auto 22px">Um app de bem-estar emocional para crianças de 1 a 10 anos, com histórias, respiração e pintura, e uma área para os pais.</p>
+  <a class="btn btn-gold js-comprar" href="https://pay.kiwify.com.br/KG3e7pO">Quero assinar por R$ 19,90/mês</a>
+  <div class="aviso-edu"><span>ⓘ</span><span><b>Programa educativo.</b> Não substitui a consulta médica individual.</span></div>
+</div>
+
+<!-- ════════ QUER IR ALÉM? ════════ -->
+<div class="block light">
+  <div class="alem">
+    <p><b>Quer ir além?</b> O programa online é um ótimo começo. Se você quiser uma avaliação individual, com exames e um plano só seu, eu atendo presencialmente em Manaus.</p>
+    <a class="btn btn-dark" href="index.html#s-form">Agendar avaliação em Manaus</a>
+  </div>
+</div>
+<p class="mais"><a href="index.html#s-online">Ver todos os programas online</a></p>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><h4>Dra. Clívia Noronha</h4><p>Médica · CRM-AM 9.190 · RQE 6182</p><p>Abordagem integrativa</p></div>
+      <div><h4>Soul Beauty Wellness</h4><p>Cristal Tower, sala 303 · Adrianópolis</p><p>Manaus · AM</p></div>
+      <div><h4>Contato</h4><a href="https://www.instagram.com/draclivianoronha" target="_blank" rel="noopener">@draclivianoronha</a><a href="index.html">Site principal</a></div>
+    </div>
+    <p class="disc">Programa educativo. Não substitui consulta, diagnóstico ou tratamento médico individual. As informações têm caráter geral e cada pessoa responde de um jeito.</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra">
+  <div class="pz">Soul Kids<b>R$ 19,90/mês</b></div>
+  <a class="btn btn-gold js-comprar" href="https://pay.kiwify.com.br/KG3e7pO">Assinar</a>
+</div>
+
+<script>
+/* ═══════════ LINK DE COMPRA COM UTM ═══════════
+   Padrão: utm_source=site · utm_medium=organico · utm_campaign=soul-kids
+   Se a pessoa chegou por anúncio (a URL desta página já traz utm_...),
+   essas UTMs são repassadas para a Kiwify no lugar do padrão. */
+var KIWIFY = 'https://pay.kiwify.com.br/KG3e7pO';
+var CAMPANHA = 'soul-kids';
+(function(){
+  var q=new URLSearchParams(location.search), out=new URLSearchParams();
+  var temUtm=false;
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    if(q.get(k)){out.set(k,q.get(k));temUtm=true;}
+  });
+  if(!temUtm){out.set('utm_source','site');out.set('utm_medium','organico');out.set('utm_campaign',CAMPANHA);}
+  var link=KIWIFY+'?'+out.toString();
+  document.querySelectorAll('.js-comprar').forEach(function(a){a.href=link;});
+})();
+
+/* ═══════════ FOTO (mesmo esquema do index) ═══════════ */
+(function(){
+  var ext=['.png','.jpg','.jpeg','.PNG','.JPG','.JPEG'];
+  (function tenta(i){
+    if(i>=ext.length) return;
+    var t=new Image();
+    t.onload=function(){document.querySelectorAll('[data-img="dra"]').forEach(function(el){el.src='dra'+ext[i];});};
+    t.onerror=function(){tenta(i+1);};
+    t.src='dra'+ext[i];
+  })(0);
+})();
+
+/* ═══════════ PERGUNTAS ═══════════ */
+document.querySelectorAll('.faq-i').forEach(function(it){
+  it.querySelector('.faq-q').addEventListener('click',function(){
+    var o=it.classList.contains('open');
+    document.querySelectorAll('.faq-i').forEach(function(x){x.classList.remove('open');});
+    if(!o)it.classList.add('open');
+  });
+});
+
+/* ═══════════ BARRA FIXA: aparece depois do botão do topo ═══════════ */
+(function(){
+  var b=document.getElementById('barra'), topo=document.getElementById('cta-topo');
+  function chk(){ b.classList.toggle('on', topo.getBoundingClientRect().bottom<0); }
+  window.addEventListener('scroll',chk,{passive:true}); chk();
+})();
+
+/* ═══════════ v2.1 · EFEITOS DE ENTRADA AO ROLAR ═══════════
+   Cada item marcado em ALVOS desliza para dentro da tela quando aparece.
+   rv = sobe · rv-e = vem da esquerda · rv-d = vem da direita · rv-z = cresce */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var ALVOS=[
+    ['.hero > div:first-child','rv-e'],['.hero-img','rv-d'],
+    ['.portas-tit','rv'],['.porta','rv','grupo'],['.ponte','rv'],
+    ['.pilar','rv','grupo'],['.block > h2','rv'],['.block > .sub','rv'],
+    ['.chip','rv','grupo'],['.exp-c','rv-z','grupo'],['.mes','rv','grupo'],['.box','rv','grupo'],
+    ['.jcard','rv','grupo'],['.pcard','rv','grupo'],['.feat','rv','grupo'],['.phone','rv-d'],
+    ['.sobre .foto','rv-e'],['.quem .foto','rv-e'],['.card','rv','grupo'],['.passo','rv','grupo'],
+    ['.faq-i','rv','grupo'],['.form-l','rv-e'],['.form-r','rv-d'],['.info','rv','grupo'],['.lista li','rv','grupo'],
+    ['.final > *','rv','grupo'],['.meio > *','rv','grupo']
+  ];
+  document.documentElement.classList.add('anim');
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  ALVOS.forEach(function(a){
+    document.querySelectorAll(a[0]).forEach(function(el,i){
+      if(el.classList.contains('rv')) return;
+      el.classList.add('rv'); if(a[1]!=='rv') el.classList.add(a[1]);
+      if(a[2]) el.style.setProperty('--d',((i%4)*0.12)+'s');
+      io.observe(el);
+    });
+  });
+  setTimeout(function(){document.querySelectorAll('.rv:not(.in)').forEach(function(el){
+    var r=el.getBoundingClientRect(); if(r.top<innerHeight) el.classList.add('in');
+  });},60);
+  document.querySelectorAll('.aval-card,.phone').forEach(function(el){el.classList.add('flutua');});
+})();
+</script>
+</body>
+</html>
