@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- VERSÃO 2.1 · Programas online -->
+<!-- VERSÃO 2.2 · Programas online -->
 <base target="_top">
 <title>Dra. Clívia Noronha · Abordagem integrativa e estética</title>
 <meta name="description" content="Cuidado integrativo em todas as fases da vida. Avaliação médica presencial em Manaus e programas online para todo o Brasil.">
@@ -702,6 +702,7 @@ var FOTOS = {
   massagem: ['massagem'],
   spa:      ['spa','massagem']   // sem spa.png, usa a foto da massagem
 };
+var FOTOS_GITHUB = 'https://dermatoclinoronha-netizen.github.io/clivianoronha/';
 var EXTENSOES = ['.png','.jpg','.jpeg','.PNG','.JPG','.JPEG'];
 function avisoFoto(k,txt){
   document.querySelectorAll('[data-img="'+k+'"],[data-bg="'+k+'"]').forEach(function(el){
@@ -729,6 +730,8 @@ Object.keys(FOTOS).forEach(function(k){
   if(emb){ aplicaFoto(k,emb); return; }
   var tentativas=[];
   FOTOS[k].forEach(function(nome){EXTENSOES.forEach(function(ext){tentativas.push(nome+ext);});});
+  /* v2.2: se não achar ao lado (caso do Apps Script), busca a foto direto no GitHub */
+  FOTOS[k].forEach(function(nome){EXTENSOES.forEach(function(ext){tentativas.push(FOTOS_GITHUB+nome+ext);});});
   (function tenta(i){
     if(i>=tentativas.length){ avisoFoto(k,'Foto não encontrada: '+FOTOS[k][0]+'.png'); return; }
     var url=tentativas[i], teste=new Image();
